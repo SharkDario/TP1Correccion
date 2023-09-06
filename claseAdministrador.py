@@ -9,7 +9,6 @@ class Administrador(Usuario):
         self.__adminName = adminName
         self.__email = email
 
-    #
     #El método get acepta un argumento llamado name, que se utiliza para especificar qué atributo se desea obtener de la instancia Administrador.
     #Si name es igual a "userId", "password", "loginStatus" o "registerDate", el método utiliza super().get() para llamar al método get de la clase base Usuario.
     #Si name es igual a "adminName" o "email", el método accede directamente a los atributos privados de la instancia Administrador
