@@ -18,6 +18,34 @@ class Pedido():
         self.__informacionDelPedido = InformacionDelPedido(shippingId, shippingType, shippingCost, shippingRegionId)
         self.__detallesDelPedido = DetallesDelPedido(orderId, productId, productName, quantity, unitCost)
 
+    def get(self, name):
+        if(name=="orderId"):
+            return self.__orderId
+        elif(name=="dateCreated"):
+            return self.__dateCreated
+        elif(name=="dateShipped"):
+            return self.__dateShipped
+        elif(name=="customerName"):
+            return self.__customerName
+        elif(name=="customerId"):
+            return self.__customerId
+        elif(name=="status"):
+            return self.__status
+
+    def set(self, name, valor):
+        if(name=="orderId"):
+            self.__orderId = valor
+        elif(name=="dateCreated"):
+            self.__dateCreated = valor
+        elif(name=="dateShipped"):
+            self.__dateShipped = valor
+        elif(name=="customerName"):
+            self.__customerName = valor
+        elif(name=="customerId"):
+            self.__customerId = valor
+        elif(name=="status"):
+            self.__status = valor
+
 #Este metodo se utiliza para realizar un pedido en el sistema.
 #Toma varios argumentos relacionados con el pedido, como el nombre del cliente, el ID del cliente, el ID del producto, el nombre del producto, la cantidad, el costo unitario, el tipo de envío, el costo de envío y la región de envío.
 #Dentro del método, se actualiza la información del pedido (informacionDelPedido) y los detalles del pedido (detallesDelPedido) con la nueva información proporcionada.
