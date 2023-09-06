@@ -7,15 +7,21 @@ class CarritoDeCompras():
         self.__cardId = cardId
         self.__productID = {}
 
-    def get(self, name):
-        if(name=="cardId"):
-            return self.__cardId
-        elif(name=="productID"):
-            return self.__productID
+    # Método para obtener el valor de una variable de instancia
+def get(self, name):
+    # Si el nombre es "cardId", devuelve el valor de la variable __cardId
+    if(name=="cardId"):
+        return self.__cardId
+    # Si el nombre es "productID", devuelve el valor de la variable __productID
+    elif(name=="productID"):
+        return self.__productID
 
-    def set(self, name, valor):
-        if(name=="cardId"):
-            self.__cardId = valor
+# Método para establecer el valor de una variable de instancia
+def set(self, name, valor):
+    # Si el nombre es "cardId", establece el valor de la variable __cardId
+    if(name=="cardId"):
+        self.__cardId = valor
+
     
     # Método privado para convertir el diccionario de productos en una cadena de texto legible
     def __diccionarioProductosATexto(self):
