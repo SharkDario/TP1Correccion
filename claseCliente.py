@@ -70,16 +70,27 @@ class Cliente(Usuario):
     def register(self, email, password):
         self.__email = email
         self.__password = password
-
+#El método login acepta dos argumentos: email y password. Estos argumentos representan la dirección de correo electrónico y la contraseña que el cliente proporciona al intentar iniciar sesión en su cuenta.
+#se realiza una comparación de igualdad entre los valores de email proporcionados como argumento y el valor almacenado en el atributo privado email de la instancia actual de Cliente.
+#se realiza una comparación similar entre los valores de password proporcionados y el valor almacenado en el atributo privado password de la instancia.
     def login(self, email, password):
         return True if((self.__email==email)&(self.__password==password)) else False
 
+
+ #el metodo updateProfile acepta cinco argumentos: password, customerName, address, email, y creditCardInfo. 
+#estos argumentos representan los nuevos valores que se desean asignar a los atributos del perfil del cliente.   
+#se utilizan llamadas al método set para asignar los nuevos valores a los atributos correspondientes de la instancia de Cliente.
     def updateProfile(self, password, customerName, address, email, creditCardInfo):
         self.set("password", password)
         self.set("customerName", customerName)
         self.set("address", address)
         self.set("email", email)
         self.set("creditCardInfo", creditCardInfo)
+
+   #El método agregarPedidoCarrito acepta un argumento llamado pedidoOCarrito. 
+    #Este argumento representa el pedido o carrito que se desea agregar a la lista de envío del cliente. 
+    #se utiliza la operación append para agregar pedidoOCarrito a la lista shippingInfo del cliente.
+#La lista shippingInfo se utiliza para llevar un registro de los pedidos, carritos u otra información relacionada con el envío que está asociada con el cliente.
 
     def agregarPedidoCarrito(self, pedidoOCarrito):
         self.__shippingInfo.append(pedidoOCarrito)
