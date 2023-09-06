@@ -7,6 +7,16 @@ class CarritoDeCompras():
         self.__cardId = cardId
         self.__productID = {}
 
+    def get(self, name):
+        if(name=="cardId"):
+            return self.__cardId
+        elif(name=="productID"):
+            return self.__productID
+
+    def set(self, name, valor):
+        if(name=="cardId"):
+            self.__cardId = valor
+    
     # Método privado para convertir el diccionario de productos en una cadena de texto legible
     def __diccionarioProductosATexto(self):
         texto=""
